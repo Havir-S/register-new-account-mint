@@ -1,0 +1,429 @@
+:root {
+  --borderColor: #C1C5C8;
+  --buttonColor: #0077C5;
+  --errorIconColor: #eb4034;
+  --linkColor: #4499D2;
+  --correctIconColor: #5ec930;
+}
+
+body {
+  background: #ECEEF1;
+  color: #4C4C4C;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2rem;
+}
+p {
+  margin: 0;
+}
+
+/* NAV */
+
+nav {
+  background: #DDDDDD;
+}
+.nav-login {
+  float: right;
+  margin: 11px 25px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.nav-login:after {
+  clear:both;
+}
+
+nav:after {
+  clear: both;
+}
+
+.nav-p {
+  text-align: right;
+  word-spacing: 1px;
+
+}
+
+.nav-login-info,
+.nav-login-button-container {
+  display: inline-block;
+  margin-left: 11px;
+  float: left;
+}
+
+#submit, .nav-login-button {
+  display: block;
+  width: 100%;
+  outline: 0;
+  color: white;
+  font-size: 1.1rem;
+  background: var(--buttonColor);
+  padding: 3px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.lock-icon {
+  font-size: 1rem;
+}
+
+i {
+  margin: 6px;
+}
+
+main {
+  float:right;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+main{
+  clear: right;
+  float:left;
+}
+
+
+/* LOGO */
+
+.intuit-logo-header{
+  text-align: center;
+}
+
+.intuit-logo-div {
+  margin: 15px auto;
+}
+
+.intuit-logo {
+  width: 130px;
+}
+
+/* ICONS */
+
+.intuit-icons-header {
+  margin-bottom: 15px;
+}
+
+.intuit-icons-div {
+  margin: auto;
+  text-align: center;
+}
+
+.icon-div {
+  display: inline-block;
+  height: 25px;
+}
+
+.icon-div-img {
+  height: 25px;
+}
+
+.icon-div-img:nth-child(odd) {
+
+}
+
+/* CONTENT */
+
+.content-tab {
+  margin-bottom: 20px;
+}
+
+.content-box {
+  background: #FFFFFF;
+  width: 390px;
+  min-height: 50px;
+  margin: 0 auto;
+  border: 1px solid #C1C5C8;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.content-captcha {
+  background: #ECEEF1;
+  text-align: center;
+}
+
+.content-captcha-text {
+  display: inline-block;
+  padding: 15px;
+  color: gray;
+  font-size: 0.65rem;
+}
+
+.content-header {
+  display:block;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--linkColor);
+}
+
+a:hover {
+  color: var(--linkColor);
+  text-decoration: underline;
+}
+
+.learn-more {
+  font-size: 12px;
+}
+
+.content-create-account {
+  margin: 20px;
+}
+
+.content-create-account-header {
+}
+
+fieldset {
+  border: 0;
+  margin-top: 10px;
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 11px;
+  text-align: left;
+  font-size: 15px;
+}
+
+input {
+  border: 1px solid #C1C5C8;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  border-radius: 3px;
+  height: 34px;
+  padding-left: 8px;
+}
+
+input:focus {
+  box-shadow: 0 0 5px 1px #5fadf5;
+}
+
+.phone-warn {
+  font-size: 10px;
+}
+
+#phoneWarning, #emailWarning {
+  margin-top: 6px;
+  display: none;
+  color: var(--errorIconColor);
+}
+/* ICON ANIMATION */
+
+.intuit-logo {
+  position: relative;
+  opacity:0;
+  bottom: -10px;
+  animation: fade-in 0.4s forwards cubic-bezier(.58,.74,.65,1.08) ;
+  animation-delay: 3s;
+}
+
+@keyframes fade-in {
+  from {opacity:0; bottom: -10px;}
+  to {opacity:1; bottom: 0;}
+}
+
+.icon-div-img {
+  position: relative;
+}
+
+.second-icon {
+  animation: second-anim 1s forwards ease-out;
+  animation-delay: 2.5s;
+  opacity: 0;
+  left: 70px;
+}
+
+@keyframes second-anim {
+  from {opacity: 0; left: 70px;}
+  to {opacity: 1; left: 0;}
+}
+
+.first-icon {
+  animation: first-anim 3s forwards ;
+  animation-timing-function: ease-in, ease-out, ease-in, ease-out, ease-in;
+}
+
+@keyframes first-anim {
+  0% {left: 195px; bottom: 100%; transform: scale(2)}
+  15% {left: 195px; bottom: 0%; transform: scale(1.7)}
+  30% {left: 195px; bottom: 50%; transform: scale(1.4)}
+  45% {left: 195px; bottom: 0%; transform: scale(1.2)}
+  100%{left: 0; transform: scale(1)}
+}
+
+.first-icon-text {
+  animation: first-text-anim 0.55s forwards ease-in;
+  animation-delay: 2.40s;
+  opacity: 0;
+  left: 50px;
+}
+
+@keyframes first-text-anim {
+  from {opacity: 0; left: 80px;}
+  to {opacity: 1; left: 0;}
+}
+
+#submit {
+  margin-top: 15px;
+  font-weight: normal;
+  padding: 6px 0;
+  width: 100%;
+  text-align: center;
+  border: 0;
+}
+
+#submit:hover {
+  background-image: linear-gradient(0deg, var(--buttonColor), #0077ff);
+}
+
+.password-min {
+  display: block;
+  font-size: 11px;
+  margin: 1px;
+  text-indent: 9px;
+}
+
+.password-error-div {
+  display: none;
+}
+
+.password-min:first-of-type {
+  margin-top: 11px;
+}
+
+.footer-form {
+  text-align: center;
+  display: block;
+  margin: 25px 0;
+}
+
+.footer-form-text {
+    color: #4C4C4C;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.input-div {
+  width: 100%;
+  position: relative;
+}
+
+.input-info {
+  display: none;
+  position: absolute;
+  transform: translate(0,-50%);
+  top: 50%;
+  left: calc(100% + 20px);
+  background-color: rgb(80,80,80);
+  border-radius: 4px;
+  text-align: center;
+  height: auto;
+}
+
+.input-info:after {
+  content: "";
+  background-color: rgb(80,80,80);
+
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  transform: rotateZ(45deg) translateX(-50%);
+  top: 50%;
+  left: 0;
+}
+
+.input-info-text {
+  font-size: 12px;
+  display: block;
+  min-width: 170px;
+  padding:5px 30px;
+  color: white;
+}
+
+.input-div-status {
+  position: absolute;
+  right: 0;
+  transform: translate(0,-50%);
+  top: 50%;
+  font-size: 17px;
+}
+
+.error-icon {
+  color: var(--errorIconColor);
+  display: none;
+}
+
+.error {
+  color: var(--errorIconColor);
+}
+
+.correct {
+  color: var(--correctIconColor);
+}
+
+.correct-border {
+  box-shadow: 0 0 4px 1px var(--correctIconColor);
+}
+
+.error-border {
+  border: 1px solid #f23029;
+  box-shadow: 0 0 5px 1px #f05954;
+}
+
+#password-confirm-fieldset {
+  display: none;
+  position: relative;
+}
+
+
+/* FOOTER */
+.footer-main {
+  margin: auto;
+  padding: 5px;
+}
+
+.footer-ul-div {
+  width: 100%;
+  color: gray;
+  text-align: center;
+  margin:auto;
+}
+
+.footer-ul-div ul {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  display: block;
+}
+
+.footer-ul-div ul li{
+  display: inline-block;
+  margin: 5px;
+}
+
+.footer-link {
+  color: #4C4C4C;
+  text-decoration: none;
+}
+
+.link-hover:hover {
+  text-decoration: underline;
+}
+
+.footer-text, .footer-ul-div {
+  font-size: 0.8rem;
+}
+
+.footer-text {
+  text-align: center;
+}

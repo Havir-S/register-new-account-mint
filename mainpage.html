@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="app.css">
+    <title>Havir - Intuit Accounts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+    var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+    "progress,section,time,video").split(',');
+    for (var i = 0; i < e.length; i++) {
+    document.createElement(e[i]);
+    }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section>
+        <nav>
+          <div class="nav-login">
+            <div class="nav-login-info">
+              <p class='nav-p'>Already have an Intuit account?</p>
+              <p class='nav-p'><a href="#">I forgot my User ID or Password</a></p>
+            </div>
+            <div class='nav-login-button-container'>
+              <button class='nav-login-button' type="button" name="button"><span class='lock-icon'><i class='fas fa-lock'></i></span>Sign In</button>
+            </div>
+          </div>
+        </nav>
+        <main>
+        <section>
+          <header class='intuit-logo-header'>
+            <div class="intuit-logo-div">
+              <a href="#"><img class='intuit-logo' src="./pics/logo.png" alt="INTUIT LOGO"></a>
+            </div>
+          </header>
+          <header class='intuit-icons-header'>
+            <div class="intuit-icons-div">
+              <div class="icon-div img-div">
+                <img class='first-icon icon-div-img' src="./pics/icon1.png" alt="icon1">
+              </div>
+              <div class="icon-div text-div">
+                <img class='first-icon-text icon-div-img' src="./pics/text1.png" alt="icon1">
+              </div>
+              <div class="icon-div img-div">
+                <img class='second-icon icon-div-img' src="./pics/icon2.png" alt="icon2">
+              </div>
+              <div class="icon-div text-div">
+                <img class='second-icon icon-div-img' src="./pics/text2.png" alt="icon2">
+              </div>
+              <div class="icon-div img-div">
+                <img class='second-icon icon-div-img' src="./pics/icon3.png" alt="icon3">
+              </div>
+              <div class="icon-div text-div">
+                <img class='second-icon icon-div-img' src="./pics/text3.png" alt="icon3">
+              </div>
+            </div>
+          </header>
+          <div class="content-tab">
+            <div class="content-box">
+              <div class="content-create-account">
+                <header class='content-create-account-header'>
+                  <span class='content-header'>Create an Intuit account</span>
+                  <span class='content-text'>One account for everything Intuit, including Mint.</span>
+                  <br>
+                  <span><a class='learn-more' href="#">Learn more</a></span>
+                </header>
+                <form id='sign-up' action="/" method="post">
+                  <fieldset>
+                    <label for="email">Email address</label>
+                    <div class="input-div email-div">
+                      <input id='email' type="email" value="" required maxlength='100'>
+                      <span class='input-div-status email-status'><i id='user-good' class='fas icons fa-user-alt'></i><i id='user-bad' class='fas icons fa-user-alt-slash error-icon'></i></span>
+                      <div class="input-info email-info">
+                        <span class='input-info-text'>You'll use this as your user ID</span>
+                      </div>
+                    </div>
+                    <div class="email-error-div">
+                      <span id='emailWarning'>Please enter a valid email</span>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label for="phone">Phone (recommended)</label>
+                    <div class="input-div email-div">
+                      <input id='phone' type="tel" value="" maxlength="30">
+                      <span class='input-div-status phone-status'><i id='phone-good' class='fas icons fa-phone'></i><i id='phone-bad' class='fas icons fa-phone-slash error-icon'></i></span>
+                      <div class="input-info phone-info">
+                        <span class='input-info-text'>We strongly recommend adding a phone number. This will help verify your account and keep it safe.</span>
+                      </div>
+                    </div>
+                    <div class="phone-error-div">
+                      <span id='phoneWarning'>Please enter a valid phone number</span>
+                      <span class='phone-warn'>Standard call, messaging or data rates may apply.</span>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label for="password">Password</label>
+                    <div class="input-div password-div">
+                      <input id='password'  type="password" value="">
+                      <span class='input-div-status password-status'><i id='password-good' class='fas icons fa-lock-open'></i><i id='password-bad' class='fas icons fa-lock error-icon'></i></span>
+                      <div class="input-info password-info">
+                        <span class='input-info-text'>Create a password you've never used before. This will keep your account safe.</span>
+                      </div>
+                    </div>
+                    <div class="password-error-div">
+                      <span id='characterLength' class='password-min'>Use 8 or more characters</span>
+                      <span id='characterCases'  class='password-min'>Use upper and lower case letters (e.g. Aa)</span>
+                      <span id='characterNumber'  class='password-min'>Use a number (e.g. 1234)</span>
+                      <span id='characterSymbol'  class='password-min'>Use a symbol (e.g. !@#$)</span>
+                    </div>
+                  </fieldset>
+                  <fieldset id='password-confirm-fieldset'>
+                    <label for="password-confirm">Confirm Password</label>
+                    <div class="input-div confirm-password-div">
+                      <input id='confirm-password' type="password" value="">
+                      <span class='input-div-status confirm-password-status'><i id='confirm-password-good' class='fas icons fa-lock-open'></i><i id='confirm-password-bad' class='fas icons fa-lock error-icon'></i></span>
+                      <div class="input-info email-info">
+                        <span class='input-info-text'>Passwords don't match</span>
+                      </div>
+                    </div>
+                    <div class="password-confirm-error-div">
+
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <div class="input-submit">
+                      <button id='submit' type="submit" name="button"><span><i class='fas fa-lock'></i></span>Create Account</button>
+                    </div>
+                  </fieldset>
+                </form>
+                <footer class='footer-form'>
+                  <span class='footer-form-text'>By clicking <span><a href="#">Create account</a></span>,
+                   you agree to our <br> <span><a href="#">Terms</a></span> and have read and acknowledge our
+                   <span><a href="#">Privacy <br> Statement.</a></span></span>
+                </footer>
+              </div>
+              <div class="content-captcha">
+                <div class="content-captcha-text">Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Use.</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </main>
+        <footer class='footer-main'>
+          <div class="footer-ul-div">
+            <ul>
+              <li><a class='footer-link link-hover' href="#">Legal</a></li>
+              <li><a class='footer-link link-hover' href="#">Privacy</a></li>
+              <li><a class='footer-link link-hover' href="#">Security</a></li>
+            </ul>
+          </div>
+          <div class="footer-text">
+            <span>© 2019 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.</span>
+            <br>
+            <span>Terms and conditions, features, support, pricing, and service options subject to change without notice.</span>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+
+
+    <script src="./app.js" charset="utf-8"></script>
+  </body>
+</html>
