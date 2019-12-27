@@ -1,0 +1,19 @@
+{
+  "name": "project-intuin-account",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Havir-S/register-new-account-mint.git"
+  },
+  "author": "Christopher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Havir-S/register-new-account-mint/issues"
+  },
+  "homepage": "https://github.com/Havir-S/register-new-account-mint"
+}
